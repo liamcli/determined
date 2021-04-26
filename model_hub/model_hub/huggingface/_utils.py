@@ -22,7 +22,7 @@ def compute_num_training_steps(experiment_config: Dict, global_batch_size: int) 
 
 
 """
-The removed_unused_columns function below is largely derived from 
+The removed_unused_columns function below is largely derived from
 transformer's trainer._removed_unused_columns method.
 
 The license for the transformer's library is reproduced below.

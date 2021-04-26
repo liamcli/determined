@@ -166,13 +166,13 @@ class QATrial(hf.BaseTransformerTrial):
     def evaluate_batch(self, batch: det_torch.TorchData, batch_idx: int) -> Dict:
         outputs = self.model(**batch)
         if isinstance(outputs, dict):
-            logits = tuple(
+            predictions = tuple(
                 v.detach().cpu().numpy() for k, v in outputs.items() if k not in ("loss", "mems")
             )
         else:
-            logits = outputs[1:].detach().cpu().numpy()
+            predictions = outputs[1:].detach().cpu().numpy()
 
-        self.reducer.update(logits)
+        self.reducer.update(predictions)
         # Although we are returning the empty dictionary below, we will still get the metrics from
         # custom reducer that we passed to the context during initialization.
         return {}

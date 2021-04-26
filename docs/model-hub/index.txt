@@ -1,0 +1,39 @@
+.. _model-hub:
+
+###########
+ Model Hub
+###########
+
+Determined's **model-hub** library makes it easy to use popular
+third-party libraries with a Determined cluster. Each supported
+third-party library in **model-hub** will be accompanied by:
+
+-  Official examples checked for correctness and thoroughly tested for
+   use with Determined.
+-  A prebuilt docker environment with all dependencies installed and
+   versioned for reproducibility.
+-  A base Determined Trial class with common functionality implemented
+   for the user.
+-  A suite of helper functions (if applicable) to allow users to easily
+   write their own trial classes for use with the third-party library.
+
+In this initial release, **model-hub** :ref:`supports
+<model-hub-transformers>` the `Huggingface transformers library
+<https://github.com/huggingface/transformers>`_.
+
+Future libraries on our roadmap to include in **model-hub** include
+
+-  `mmdetection <https://github.com/open-mmlab/mmdetection>`_
+-  `detectron2 <https://github.com/facebookresearch/detectron2>`_
+
+If you have additional libraries you want to see supported in
+**model-hub** please let us know!
+
+For next steps, learn more about **model-hub** :ref:`support for
+transformers <model-hub-transformers>`!
+
+.. toctree::
+   :maxdepth: 1
+   :hidden:
+
+   transformers/index

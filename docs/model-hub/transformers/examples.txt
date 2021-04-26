@@ -1,0 +1,107 @@
+.. _model-hub-transformers-examples:
+
+##########
+ Examples
+##########
+
+`Transformers examples
+<https://github.com/huggingface/transformers/tree/master/examples>`_ are
+the starting point for many users of the `transformers
+<https://github.com/huggingface/transformers>`_ library. Hence, they are
+the core feature of **model-hub's** support for transformers library. In
+fact, each `transformer example corresponding to a core transformer task
+<https://huggingface.co/transformers/examples.html#the-big-table-of-tasks>`_
+has an associated task in **model-hub** that is guaranteed to work with
+Determined and verified for correctness. See the table below for a
+summary of the **model-hub** transformers examples:
+
+.. list-table::
+   :header-rows: 1
+
+   -  -  Task
+      -  Determined Trial
+      -  Description
+      -  Dataset
+
+   -  -  `language-modeling
+         <https://github.com/determined-ai/determined/tree/master/model-hub/examples/huggingface/language-modeling>`_
+      -  `CLMTrial
+         <https://github.com/determined-ai/determined/tree/master/model-hub/examples/huggingface/language-modeling/clm_trial.py>`_
+      -  PyTorchTrial for causal language modeling
+      -  WikiText-2
+
+   -  -  `language-modeling
+         <https://github.com/determined-ai/determined/tree/master/model-hub/examples/huggingface/language-modeling>`_
+      -  `MLMTrial
+         <https://github.com/determined-ai/determined/tree/master/model-hub/examples/huggingface/language-modeling/mlm_trial.py>`_
+      -  PyTorchTrial for masked language modeling
+      -  WikiText-2
+
+   -  -  `language-modeling
+         <https://github.com/determined-ai/determined/tree/master/model-hub/examples/huggingface/language-modeling>`_
+      -  `PLMTrial
+         <https://github.com/determined-ai/determined/tree/master/model-hub/examples/huggingface/language-modeling/plm_trial.py>`_
+      -  PyTorchTrial for permutation language modeling
+      -  WikiText-2
+
+   -  -  `multiple-choice
+         <https://github.com/determined-ai/determined/tree/master/model-hub/examples/huggingface/multiple-choice>`_
+      -  `SWAGTrial
+         <https://github.com/determined-ai/determined/tree/master/model-hub/examples/huggingface/multiple-choice/swag_trial.py>`_
+      -  PyTorchTrial for multiple-choice
+      -  SWAG
+
+   -  -  `question-answering
+         <https://github.com/determined-ai/determined/tree/master/model-hub/examples/huggingface/question-answering>`_
+      -  `QATrial
+         <https://github.com/determined-ai/determined/tree/master/model-hub/examples/huggingface/question-answering/qa_trial.py>`_
+      -  PyTorchTrial for question-answering
+      -  SQuAD, SQuAD version 2
+
+   -  -  `question-answering
+         <https://github.com/determined-ai/determined/tree/master/model-hub/examples/huggingface/question-answering>`_
+      -  `QABeamSearchTrial
+         <https://github.com/determined-ai/determined/tree/master/model-hub/examples/huggingface/question-answering/qa_beam_search_trial.py>`_
+      -  PyTorchTrial for question-answering with beam search
+      -  SQuAD, SQuAD version 2
+
+   -  -  `text-classification
+         <https://github.com/determined-ai/determined/tree/master/model-hub/examples/huggingface/text-classification>`_
+      -  `GLUETrial
+         <https://github.com/determined-ai/determined/tree/master/model-hub/examples/huggingface/text-classification/glue_trial.py>`_
+      -  PyTorchTrial for GLUE datasets
+      -  GLUE
+
+   -  -  `text-classification
+         <https://github.com/determined-ai/determined/tree/master/model-hub/examples/huggingface/text-classification>`_
+      -  `XNLITrial
+         <https://github.com/determined-ai/determined/tree/master/model-hub/examples/huggingface/text-classification/xnli_trial.py>`_
+      -  PyTorchTrial for XNLI
+      -  XNLI.
+
+   -  -  `token-classification
+         <https://github.com/determined-ai/determined/tree/master/model-hub/examples/huggingface/token-classification>`_
+      -  `NERTrial
+         <https://github.com/determined-ai/determined/tree/master/model-hub/examples/huggingface/token-classification/ner_trial.py>`_
+      -  PyTorchTrial for named-entity recognition
+      -  CoNLL
+
+   -  -  `seq2seq summarization
+         <https://github.com/determined-ai/determined/tree/master/model-hub/examples/huggingface/summarization>`_
+      -  `TODO
+         <https://github.com/determined-ai/determined/tree/master/model-hub/examples/huggingface/token-classification/ner_trial.py>`_
+      -  PyTorchTrial for summarization
+      -  XSum, CNN/DailyMail
+
+   -  -  `seq2seq translation
+         <https://github.com/determined-ai/determined/tree/master/model-hub/examples/huggingface/translation>`_
+      -  `TODO
+         <https://github.com/determined-ai/determined/tree/master/model-hub/examples/huggingface/token-classification/ner_trial.py>`_
+      -  PyTorchTrial for translation
+      -  WMT16
+
+Each of the Determined trials above subclasses the
+``BaseTransformerTrial`` and makes use of helper functions in
+``model_hub.huggingface`` to drastically reduce the code needed to run
+the example. See :ref:`the api <model-hub-transformers-api>` for more
+details.

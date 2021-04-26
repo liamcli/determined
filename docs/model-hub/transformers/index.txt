@@ -1,0 +1,66 @@
+.. _model-hub-transformers:
+
+##############
+ Transformers
+##############
+
+`The Huggingface transformers library
+<https://github.com/huggingface/transformers>`_ is the de-facto library
+for natural language processing models. It provides pretrained weights
+for leading NLP models and allows users to easily use these pretrained
+models for the most common NLP tasks like language modeling, text
+classification, and question answering among others. We designed
+**model-hub** to make it easy for users to train transformer models in
+Determined while keeping the developer experience as close as possible
+to what it's like working directly with the transformers library.
+
+Using our library will provide access to some compelling benefits:
+
+-  Easy :ref:`multi-node distributed training <multi-gpu-training>` with
+   no code modifications (Determined automatically sets up the
+   distributed backend for you)
+
+-  :ref:`State-of-the-art hyperparameter search <hyperparameter-tuning>`
+   and visualization, experiment tracking, and artifact store without
+   integrating with third-party libraries.
+
+-  :ref:`Automated cluster management, fault tolerance, and job
+   rescheduling <benefits-of-determined>` so you don't have to worry
+   about provisioning resources or babysit your experiments.
+
+Given the benefits above, we think this library will be particularly
+useful to you if any of the following apply:
+
+-  You are an existing user of Determined that wants to get started
+   quickly using transformers in Determined.
+
+-  You are a transformers user that wants to easily run more advanced
+   workflows with transformers like multi-node distributed training and
+   advanced hyperparameter search.
+
+-  You are a transformers user looking for a single platform to manage
+   experiments, handle checkpoints with automated fault tolerance, and
+   perform hyperparameter search/visualization.
+
+Lastly, while we strive to offer as many of the features supported in
+the original Huggingface transformers library, there are a few things
+that are not supported currently:
+
+-  Tensorflow version of transformers
+-  Suport for deepspeed and fairscale
+-  Running on TPUs
+
+**Next Steps**
+
+-  Learn how to :ref:`start using transformers with Determined
+   <model-hub-transformers-tutorial>`.
+-  Hit the ground running with **model-hub** :ref:`implementation of all
+   core transformers tasks <model-hub-transformers-examples>`.
+
+.. toctree::
+   :maxdepth: 3
+   :hidden:
+
+   tutorial
+   examples
+   api
