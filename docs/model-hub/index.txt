@@ -32,7 +32,7 @@ Each supported third-party library in model-hub is accompanied by:
 For a given task, deep learning practioners often adapt existing model
 implementations from a trusted third-party library, such as HuggingFace
 Transformers. When beginning your deep learning project in this way, we
-suggest using Model Hub with the following these steps:
+suggest using **model-hub** with the following these steps:
 
 -  Check for a Model Hub library that supports model implementations for
    your task
@@ -41,8 +41,7 @@ suggest using Model Hub with the following these steps:
    task, copy, customize, and deploy it
 
 -  If the Model Hub Library does not include example fit for your task,
-   copy the base Determined Trial class and customize it using the
-   library's helper functions
+   copy the base Determined Trial class and customize it
 
    For detailed instructions, check out the documentation for your Model
    Hub library of choice.
@@ -51,7 +50,7 @@ suggest using Model Hub with the following these steps:
  Libraries Available
 *********************
 
-In this initial release, model-hub :ref:`supports
+In this initial release, **model-hub** :ref:`supports
 <model-hub-transformers>` the `Huggingface transformers library
 <https://github.com/huggingface/transformers>`_.
 
@@ -60,10 +59,12 @@ Future libraries on our roadmap to include in model-hub include
 -  `mmdetection <https://github.com/open-mmlab/mmdetection>`_
 -  `detectron2 <https://github.com/facebookresearch/detectron2>`_
 
-If you have additional libraries you want to see supported in
-**model-hub** please let us know!
+If you have additional libraries you want to see supported in **model-hub**
+please let us know by filing an issue on `GitHub
+<https://github.com/determined-ai/determined>`_ or reaching out on `Slack
+<https://join.slack.com/t/determined-community/shared_invite/zt-cnj7802v-KcVbaUrIzQOwmkmY7gP0Ew>`_
 
-For next steps, learn more about model-hub :ref:`support for
+For next steps, learn more about **model-hub** :ref:`support for
 transformers <model-hub-transformers>`!
 
 .. toctree::
